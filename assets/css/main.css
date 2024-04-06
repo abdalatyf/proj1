@@ -1,0 +1,256 @@
+:root {
+  --main-color: #232436;
+  --orange-color: #ffd050;
+  --blue-color: #8768c1;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  background-color: var(--main-color);
+  padding: 15px 0 10px;
+}
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .title {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+nav .container > div {
+  position: relative;
+}
+nav .links {
+  display: flex;
+}
+nav .links a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  padding: 5px 15px;
+  transition: 0.3s;
+}
+nav .links a:hover {
+  color: var(--main-color);
+  background-color: white;
+}
+nav .icon {
+  padding: 5px 10px;
+  background-color: var(--orange-color);
+  display: none;
+}
+nav .icon span {
+  background-color: var(--main-color);
+  display: block;
+  height: 2px;
+  width: 25px;
+  margin: 5px 0;
+}
+@media (max-width: 767px) {
+  nav .links {
+    display: none;
+  }
+  nav .icon {
+    display: block;
+  }
+  nav .container > div:hover .links {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 65px;
+    right: 2px;
+    z-index: 5;
+    width: 150px;
+  }
+  nav .container > div:hover .links li {
+    background-color: white;
+    padding: 5px;
+  }
+  nav .container > div:hover .links li a {
+    color: var(--main-color);
+  }
+  nav .container > div:hover .links li a:hover {
+    background-color: transparent;
+    padding-left: 20px;
+  }
+  nav .container > div:hover::before {
+    content: "";
+    border: 20px solid white;
+    position: absolute;
+    border-color: transparent transparent white;
+    top: 25px;
+    right: 2px;
+    z-index: 5;
+  }
+}
+
+footer {
+  background-color: var(--main-color);
+}
+footer .nav {
+  padding: 20px 0;
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav .title {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+.nav .links {
+  display: flex;
+}
+.nav .links a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  padding: 5px 15px;
+  transition: 0.3s;
+}
+.nav .links a:hover {
+  color: var(--main-color);
+  background-color: white;
+}
+
+footer .subscribe .container {
+  background-color: #2d2e3f;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+footer .subscribe .container p {
+  color: white;
+  font-weight: 500;
+  font-size: 28px;
+  width: 50%;
+}
+footer .subscribe .container form {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 50%;
+  gap: 20px;
+  align-self: start;
+  padding-top: 10px;
+}
+footer .subscribe .container form input[type="email"] {
+  display: block;
+  padding: 12px 20px;
+  background-color: transparent;
+  border: 1px solid hsla(0, 0%, 80%, 0.5);
+  flex-grow: 1;
+  color: white;
+  font-size: 18px;
+}
+footer .subscribe .container form input[type="email"]:focus {
+  outline: none;
+}
+footer .subscribe .container form input[type="submit"] {
+  background-color: var(--orange-color);
+  color: var(--main-color);
+  padding: 0 40px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+  line-height: 100%;
+}
+footer .subscribe .container form input[type="submit"]:hover {
+  color: white;
+  background-color: var(--main-color);
+}
+
+footer .about {
+  padding: 35px 0;
+}
+footer .about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+footer .about .container .info {
+  color: #adaeb4;
+  font-size: 15px;
+}
+footer .about .container ul {
+  display: flex;
+}
+footer .about ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: #adaeb4;
+}
+footer .about ul li i {
+  transition: 0.3s;
+}
+footer .about ul li.facebook:hover i {
+  color: #1877f2;
+}
+footer .about ul li.twitter:hover i {
+  color: #1da1f2;
+}
+footer .about ul li.insta:hover i {
+  color: #fd1d1d;
+}
+footer .about ul li.linkedin:hover i {
+  color: #0a66c2;
+}
+@media (max-width: 991px) {
+  footer .subscribe .container {
+    flex-direction: column;
+  }
+  footer .subscribe .container > :not(:empty) {
+    width: 100%;
+  }
+}
+/* 
+
+
+
+
+
+
+*/
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
